@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    height: 100vh; /* 100% of the viewport height */
+  }
+  
+  .sidebar {
+    width: 80px;
+    background-color: grey;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-icon {
+    font-size: 24px; /* Adjust the font size as needed */
+    cursor: pointer;
+    color: white;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    background-color: beige;
+    color: gray;
+    transition: margin-left 0.3s;
+  }
+  
+  .navbar {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+  
+    label {
+      margin-right: 10px;
+    }
+  
+    input {
+      padding: 5px;
+      margin-right: 10px;
+    }
+  
+    .btn {
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+  
+    .deposit, .withdraw {
+      background-color: black;
+      color: white;
+    }
+  }
+  
+  /* Sidebar open style */
+  .container.sidebar-open .sidebar {
+    margin-left: 0;
+  }
+  
+  .container.sidebar-open .content {
+    margin-left: 80px;
+  }
+  

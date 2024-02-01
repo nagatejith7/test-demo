@@ -1,0 +1,26 @@
+<div class="container" [class.sidebar-open]="isSidebarOpen">
+    <!-- Sidebar with menu icon -->
+    <div class="sidebar">
+      <div class="menu-icon" (click)="toggleSidebar()">
+        ☰
+      </div>
+    </div>
+  
+    <!-- Main content area -->
+    <div class="content">
+      <!-- Horizontal menu bar -->
+      <div class="navbar">
+        <h1>Your Name</h1>
+      </div>
+  
+      <!-- Amount field and buttons -->
+      <div class="actions">
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" placeholder="Enter amount">
+  
+        <button class="btn deposit">Deposit</button>
+        <button class="btn withdraw">Withdraw</button>
+      </div>
+    </div>
+  </div>
+  
