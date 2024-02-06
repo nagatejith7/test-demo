@@ -1,26 +1,53 @@
 <div class="container" [class.sidebar-open]="isSidebarOpen">
-    <!-- Sidebar with menu icon -->
-    <div class="sidebar">
-      <div class="menu-icon" (click)="toggleSidebar()">
-        ☰
-      </div>
+  <!-- Sidebar with menu icon -->
+  <div class="sidebar">
+    <div class="menu-icon" (click)="toggleSidebar()">
+      <mat-icon>menu</mat-icon> <!-- Use Angular Material Icon for menu -->
     </div>
-  
-    <!-- Main content area -->
-    <div class="content">
-      <!-- Horizontal menu bar -->
-      <div class="navbar">
-        <h1>Your Name</h1>
+    <div class="navbar" [class.show]="isSidebarOpen">
+       <!-- Sidebar navigation items -->
+      <div class="menu-item">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
       </div>
-  
-      <!-- Amount field and buttons -->
-      <div class="actions">
-        <label for="amount">Amount:</label>
-        <input type="text" id="amount" placeholder="Enter amount">
-  
-        <button class="btn deposit">Deposit</button>
-        <button class="btn withdraw">Withdraw</button>
+      <div class="menu-item">
+        <mat-icon>explore</mat-icon>
+        <span>Explore</span>
       </div>
+      <div class="menu-item">
+        <mat-icon>notifications</mat-icon>
+        <span>Notifications</span>
+      </div>
+      <!-- Add more menu options as needed -->
+      <div class="menu-item">
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+      </div>
+      <div class="menu-item">
+        <mat-icon>account_circle</mat-icon>
+        <span>Account</span>
+      </div>
+      <!-- Sidebar navigation items go here if any -->
     </div>
   </div>
-  
+
+  <!-- Main content area -->
+  <div class="content">
+    <!-- Horizontal menu bar -->
+    <div class="navbar">
+      <h1 id="Name">Your Name</h1>
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" value="0">
+      <button class="btn deposit" (click)="nav()">Deposit</button>
+      <button class="btn withdraw">Withdraw</button>
+    </div>
+
+  <div class="container1">
+      <canvas id="myChart"></canvas>
+    </div> 
+    <!-- app.component.html -->
+
+
+    <!-- Other content of your home component goes here -->
+  </div>
+</div>
