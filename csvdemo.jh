@@ -1,0 +1,15 @@
+
+// Define entity for storing CSV file data
+entity CsvData {
+  fileName String,
+  fileSize Long,
+  fileType String,
+  // Add more attributes as needed
+}
+
+// Generate DTO for CsvData entity
+dto * with mapstruct
+
+// Generate service for CsvData entity
+service * with serviceClass
+
